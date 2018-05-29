@@ -14,6 +14,24 @@ LingoRecord is a better recorder for Android, you can easily process pcm data fr
 
 4. 提供 aidl 接口方便在另一个进程中处理录音数据。
 
+# 如何集成
+
+Gradle:
+
+```
+// Add the JitPack repository to your build file
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+// Add the dependency
+implementation 'com.github.lingochamp:LingoRecorder:1.2.5'
+
+```
+
 # Sample
 
 ## LingoRecorder 的使用
@@ -105,16 +123,6 @@ lingoRecorder.setOnVolumeListener(new OnVolumeListener() {
 Demo 中提供了相关示例，效果图：
 
 ![image](https://raw.github.com/lingochamp/LingoRecorder/develop/demo/images/volume.gif)
-
-
-# 在项目中引用
-
-Gradle:
-
-```
-compile 'com.github.lingochamp:LingoRecorder:1.2.1-SNAPSHOT'
-
-```
 
 # Pull Request  
 欢迎各位基于 develop 分支进行 pull request。
